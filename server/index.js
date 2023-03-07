@@ -1,5 +1,8 @@
 const express = require('express');
+const path = require('path');
 let app = express();
+
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // TODO - your code here!
 // Set up static file service for files in the `client/dist` directory.
